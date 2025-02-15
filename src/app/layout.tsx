@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {
@@ -14,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dracula">
-      <body className="antialiased">
+    <html lang="en" data-theme="dim">
+      <body className="antialiased flex flex-row">
         <Sidebar />
         {children}
       </body>
