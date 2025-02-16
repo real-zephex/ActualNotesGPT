@@ -4,14 +4,8 @@ import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import ProfileButton from "./profileButton";
 import { useHotkeys } from "react-hotkeys-hook";
-import { createClient } from "@/utils/supabase/client";
-import {
-  getChatUUIDS,
-  getStoredDataTemp,
-  tabsStore,
-} from "@/utils/localStorage";
+import { getChatUUIDS, tabsStore } from "@/utils/localStorage";
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -83,11 +77,6 @@ const Sidebar = () => {
         >
           {isExpanded ? <FaArrowCircleLeft /> : <FaArrowCircleRight />}
         </button>
-
-        {/* Profile Button */}
-        {/* <div className="absolute bottom-0 left-1/2  -translate-y-1/2 -translate-x-1/2 w-full flex justify-center px-2">
-          <ProfileButton />
-        </div> */}
       </div>
     </main>
   );

@@ -26,6 +26,7 @@ const Download = async (content: string) => {
       content: blob,
     };
   } catch (error) {
+    console.error(error);
     return {
       status: false,
       content: null,
