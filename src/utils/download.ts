@@ -4,7 +4,6 @@ const Download = async (content: string) => {
   try {
     const formdata = new URLSearchParams();
     formdata.append("markdown", content);
-    console.log(content);
     console.log("Download button is working properly.");
     const response = await fetch("https://md-to-pdf-hqx4.onrender.com/", {
       method: "POST",
@@ -17,7 +16,10 @@ const Download = async (content: string) => {
     if (!response.ok) {
       console.error("Failed to convert PDF");
       // Handle
-      return;
+      return {
+        status: false,
+        content: null,
+      };
     }
 
     const blob = await response.blob();

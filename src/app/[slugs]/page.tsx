@@ -127,16 +127,16 @@ const ChatWindow = ({ params }: { params: Promise<{ slugs: string }> }) => {
                 )}
               </div>
             </div>
-            {generating && (
-              <div className="chat chat-start">
-                <div className="chat-bubble">
-                  Hang tight! Our chat genie is working its magic... 🧞‍♂️
-                  <span className="loading loading-infinity loading-sm"></span>
-                </div>
-              </div>
-            )}
           </React.Fragment>
         ))}
+        {generating && (
+          <div className="chat chat-start">
+            <div className="chat-bubble">
+              Hang tight! Our chat genie is working its magic... 🧞‍♂️
+              <span className="loading loading-infinity loading-sm"></span>
+            </div>
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
       <div className="bg-gray-800 rounded-t-xl">
