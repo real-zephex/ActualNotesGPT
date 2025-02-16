@@ -10,7 +10,6 @@ import { getChatUUIDS, tabsStore } from "@/utils/localStorage";
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [chats, setChats] = useState<string[]>([]);
-  const [buttonActive, setButtonActive] = useState<boolean>(false);
 
   function handleNewChatWindows() {
     const id = crypto.randomUUID();
@@ -61,12 +60,6 @@ const Sidebar = () => {
           <button
             className="btn btn-info btn-sm w-full"
             onClick={() => handleNewChatWindows()}
-            disabled={buttonActive}
-            title={
-              buttonActive
-                ? "Please sign in to avail this feature."
-                : "New chat window."
-            }
           >
             {isExpanded ? "New Chat" : "+"}
           </button>
