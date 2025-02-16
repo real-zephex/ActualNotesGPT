@@ -2,7 +2,7 @@ const Home = async () => {
   return (
     <main className="container mx-auto h-dvh flex items-center justify-center flex-col">
       <h2 className="text-2xl lg:text-5xl font-sans font-bold bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent">
-        Notes GPT
+        CQ Bot
       </h2>
       <p className="text-center">
         The perfect mixture of AI and education to better assist the learners.

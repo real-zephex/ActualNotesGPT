@@ -41,7 +41,7 @@ const Sidebar = () => {
       <div className="h-full w-full relative">
         <section>
           <h2 className="font-sans text-lg ml-2 p-2 text-white font-bold">
-            {isExpanded ? "Notes GPT" : "NG"}
+            {isExpanded ? "CQ Bot" : "CQ"}
           </h2>
           <div className="flex w-full flex-col -mt-6 px-2">
             <div className="divider divider-primary"></div>
